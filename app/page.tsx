@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <h2 className="text-lg font-semibold text-center">Leave a Message</h2>
+            <h2 className="text-lg font-semibold text-center">Leave a Message or an alternative platform you would prefer</h2>
             <input
               type="text"
               name="name"
