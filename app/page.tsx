@@ -74,7 +74,7 @@ export default function Home() {
         <p>Name: Dipe Kehinde</p>
         <p>Email: dipekehinde@gmail.com</p>
         <p>WhatsApp: +2348167774084</p>
-        <p>Telegram: @Hex_Nicklas</p>
+        <p>Telegram: <a href="https://t.me/Hex_Nicklas" target="_blank" rel="noopener noreferrer" className="underline text-blue-600 hover:text-blue-800">@Hex_Nicklas</a></p>
       </div>
     </div>
   );
