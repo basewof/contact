@@ -10,12 +10,28 @@ export default function Home() {
     e.preventDefault();
     setSubmitting(true);
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const formData = new FormData(form);
 
-    const res = await fetch("https://formspree.io/f/v89c1yia7wb", {
+    const blocks = [
+      {
+        type: "text",
+        name: "name",
+        value: formData.get("name") || "",
+      },
+      {
+        type: "text",
+        name: "message",
+        value: formData.get("message") || "",
+      },
+    ];
+
+    const res = await fetch("https://forminit.com/f/v89c1yia7wb", {
       method: "POST",
-      body: data,
-      headers: { Accept: "application/json" },
+      body: JSON.stringify({ blocks }),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
     });
 
     if (res.ok) {
