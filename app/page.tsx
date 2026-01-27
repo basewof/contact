@@ -41,17 +41,27 @@ export default function Home() {
     setSubmitting(false);
   }
 
-  return (
+  return true ? (
+    <div> </div>
+  ) : (
     <div className="font-sans grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-10 sm:p-20">
       <div className="text-center max-w-xl space-y-2">
-        <p>Hi, I would like to move the conversation away from Upwork if you dont mind. You can contact me through any of the following</p>
-        <p>Also if you don&apos;t mind, I will prefer to receive any remaining payment off-upwork or as crypto</p>
+        <p>
+          Hi, I would like to move the conversation away from Upwork if you dont
+          mind. You can contact me through any of the following
+        </p>
+        <p>
+          Also if you don&apos;t mind, I will prefer to receive any remaining
+          payment off-upwork or as crypto
+        </p>
       </div>
 
       <div className="w-full max-w-md">
         {submitted ? (
           <div className="text-center p-6 border border-green-500 rounded-lg">
-            <p className="text-green-600 font-semibold">Thanks! Your message has been sent.</p>
+            <p className="text-green-600 font-semibold">
+              Thanks! Your message has been sent.
+            </p>
             <button
               onClick={() => setSubmitted(false)}
               className="mt-4 text-sm underline cursor-pointer"
@@ -61,7 +71,9 @@ export default function Home() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
-            <h2 className="text-lg font-semibold text-center">Leave a Message or an alternative platform you would prefer</h2>
+            <h2 className="text-lg font-semibold text-center">
+              Leave a Message or an alternative platform you would prefer
+            </h2>
             <input
               type="text"
               name="name"
@@ -90,7 +102,17 @@ export default function Home() {
         <p>Name: Dipe Kehinde</p>
         <p>Email: dipekehinde@gmail.com</p>
         <p>WhatsApp: +2348167774084</p>
-        <p>Telegram: <a href="https://t.me/Hex_Nicklas" target="_blank" rel="noopener noreferrer" className="underline text-blue-600 hover:text-blue-800">@Hex_Nicklas</a></p>
+        <p>
+          Telegram:{" "}
+          <a
+            href="https://t.me/Hex_Nicklas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-600 hover:text-blue-800"
+          >
+            @Hex_Nicklas
+          </a>
+        </p>
       </div>
     </div>
   );
